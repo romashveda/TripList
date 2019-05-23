@@ -5,3 +5,6 @@ DerivedData/
 ## Various settings
 *.pbxuser
 xcuserdata/
+
+Pods
+Podfile.lock
