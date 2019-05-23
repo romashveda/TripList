@@ -14,6 +14,8 @@ class TripListViewController: UIViewController {
     @IBOutlet weak var filterControl: UISegmentedControl!
     @IBOutlet weak var addTripButton: UIButton!
     
+    @IBAction func addTripAction(_ sender: Any) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -13,7 +13,11 @@
 		19F2DCBA229707EE00F34AA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19F2DCB9229707EE00F34AA3 /* Assets.xcassets */; };
 		19F2DCBD229707EE00F34AA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19F2DCBB229707EE00F34AA3 /* LaunchScreen.storyboard */; };
 		19F2DCC8229707EE00F34AA3 /* TripListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F2DCC7229707EE00F34AA3 /* TripListTests.swift */; };
-		19F2DCD32297084C00F34AA3 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F2DCD22297084C00F34AA3 /* AddTripViewController.swift */; };
+		19F2DCDC22972C8400F34AA3 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F2DCDB22972C8400F34AA3 /* AddTripViewController.swift */; };
+		19F2DCE022972CCB00F34AA3 /* AddTripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F2DCDF22972CCB00F34AA3 /* AddTripViewModel.swift */; };
+		19F2DCE422972D2F00F34AA3 /* TripListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F2DCE322972D2F00F34AA3 /* TripListViewModel.swift */; };
+		19F2DCE82297322700F34AA3 /* FireStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F2DCE72297322700F34AA3 /* FireStoreService.swift */; };
+		19F2DCEA22973DB100F34AA3 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F2DCE922973DB100F34AA3 /* Trip.swift */; };
 		5E7A21E9DFA097898A926385 /* Pods_TripListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0D18E1A062254A8AD2950E /* Pods_TripListTests.framework */; };
 		5EC4652D0ADCBD4919C9D8C1 /* Pods_TripList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 552ED3BB7D14F9C66EF5BC93 /* Pods_TripList.framework */; };
 /* End PBXBuildFile section */
@@ -39,7 +43,11 @@
 		19F2DCC3229707EE00F34AA3 /* TripListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F2DCC7229707EE00F34AA3 /* TripListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListTests.swift; sourceTree = "<group>"; };
 		19F2DCC9229707EE00F34AA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19F2DCD22297084C00F34AA3 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
+		19F2DCDB22972C8400F34AA3 /* AddTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
+		19F2DCDF22972CCB00F34AA3 /* AddTripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewModel.swift; sourceTree = "<group>"; };
+		19F2DCE322972D2F00F34AA3 /* TripListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewModel.swift; sourceTree = "<group>"; };
+		19F2DCE72297322700F34AA3 /* FireStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreService.swift; sourceTree = "<group>"; };
+		19F2DCE922973DB100F34AA3 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		2111AF00985D1F12F43CA937 /* Pods-TripListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripListTests.release.xcconfig"; path = "Target Support Files/Pods-TripListTests/Pods-TripListTests.release.xcconfig"; sourceTree = "<group>"; };
 		552ED3BB7D14F9C66EF5BC93 /* Pods_TripList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TripList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F749D5CB2149BDBAF7D029 /* Pods-TripList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TripList.debug.xcconfig"; path = "Target Support Files/Pods-TripList/Pods-TripList.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,9 +99,9 @@
 		19F2DCB1229707EB00F34AA3 /* TripList */ = {
 			isa = PBXGroup;
 			children = (
+				19F2DCE62297321400F34AA3 /* Model */,
+				19F2DCDA22972C6F00F34AA3 /* Modules */,
 				19F2DCB2229707EB00F34AA3 /* AppDelegate.swift */,
-				19F2DCB4229707EB00F34AA3 /* TripListViewController.swift */,
-				19F2DCD22297084C00F34AA3 /* AddTripViewController.swift */,
 				19F2DCB6229707EB00F34AA3 /* Main.storyboard */,
 				19F2DCB9229707EE00F34AA3 /* Assets.xcassets */,
 				19F2DCBB229707EE00F34AA3 /* LaunchScreen.storyboard */,
@@ -109,6 +117,42 @@
 				19F2DCC9229707EE00F34AA3 /* Info.plist */,
 			);
 			path = TripListTests;
+			sourceTree = "<group>";
+		};
+		19F2DCDA22972C6F00F34AA3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				19F2DCDE22972CAA00F34AA3 /* AddTrip */,
+				19F2DCDD22972C8F00F34AA3 /* TripList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		19F2DCDD22972C8F00F34AA3 /* TripList */ = {
+			isa = PBXGroup;
+			children = (
+				19F2DCB4229707EB00F34AA3 /* TripListViewController.swift */,
+				19F2DCE322972D2F00F34AA3 /* TripListViewModel.swift */,
+			);
+			path = TripList;
+			sourceTree = "<group>";
+		};
+		19F2DCDE22972CAA00F34AA3 /* AddTrip */ = {
+			isa = PBXGroup;
+			children = (
+				19F2DCDB22972C8400F34AA3 /* AddTripViewController.swift */,
+				19F2DCDF22972CCB00F34AA3 /* AddTripViewModel.swift */,
+			);
+			path = AddTrip;
+			sourceTree = "<group>";
+		};
+		19F2DCE62297321400F34AA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19F2DCE72297322700F34AA3 /* FireStoreService.swift */,
+				19F2DCE922973DB100F34AA3 /* Trip.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2D03076D3E58C422B0DC4633 /* Frameworks */ = {
@@ -128,7 +172,6 @@
 				A3F7F2B2961EAEDB09FAD86D /* Pods-TripListTests.debug.xcconfig */,
 				2111AF00985D1F12F43CA937 /* Pods-TripListTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -327,9 +370,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19F2DCE422972D2F00F34AA3 /* TripListViewModel.swift in Sources */,
 				19F2DCB5229707EB00F34AA3 /* TripListViewController.swift in Sources */,
+				19F2DCE022972CCB00F34AA3 /* AddTripViewModel.swift in Sources */,
+				19F2DCE82297322700F34AA3 /* FireStoreService.swift in Sources */,
+				19F2DCDC22972C8400F34AA3 /* AddTripViewController.swift in Sources */,
+				19F2DCEA22973DB100F34AA3 /* Trip.swift in Sources */,
 				19F2DCB3229707EB00F34AA3 /* AppDelegate.swift in Sources */,
-				19F2DCD32297084C00F34AA3 /* AddTripViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
