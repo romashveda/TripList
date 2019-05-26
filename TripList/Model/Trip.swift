@@ -8,8 +8,13 @@
 
 import Foundation
 
-struct Trip: Codable {
-    var name: String
-    var startDate: Date
-    var endDate: Date
+protocol Identifiable {
+    var id: String? { get set }
+}
+
+struct Trip: Codable, Identifiable {
+    var id: String?
+    var name: String?
+    var startDate: Date?
+    var endDate: Date?
 }
